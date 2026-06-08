@@ -54,6 +54,7 @@ class SpawnTool(Tool):
 
     async def execute(self, task: str, label: str | None = None, **kwargs: Any) -> str:
         """Spawn a subagent to execute the given task."""
+        # 调用 SubagentManager 创建子代理
         return await self._manager.spawn(
             task=task,
             label=label,

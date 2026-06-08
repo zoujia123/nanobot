@@ -248,6 +248,7 @@ class AgentLoop:
                 break
 
         if final_content is None and iteration >= self.max_iterations:
+             # 达到最大迭代次数，提示用户分解任务
             logger.warning("Max iterations ({}) reached", self.max_iterations)
             final_content = (
                 f"I reached the maximum number of tool call iterations ({self.max_iterations}) "

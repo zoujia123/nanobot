@@ -63,6 +63,7 @@ class SubagentManager:
         display_label = label or task[:30] + ("..." if len(task) > 30 else "")
         origin = {"channel": origin_channel, "chat_id": origin_chat_id}
 
+         # 🔥 关键：创建后台任务
         bg_task = asyncio.create_task(
             self._run_subagent(task_id, task, display_label, origin)
         )
