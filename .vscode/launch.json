@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Nanobot: Gateway (QQ/总线) 调试",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "nanobot.cli.commands",
+            "console": "integratedTerminal",
+            "args": [
+                "gateway",
+                "--verbose" // 强烈建议开启，这样你能在控制台看到详细的消息吞吐日志
+            ],
+            "justMyCode": false // 建议设为 false，方便你在调试时看清消息是如何流入总线的
+        }
+    ]
+}
